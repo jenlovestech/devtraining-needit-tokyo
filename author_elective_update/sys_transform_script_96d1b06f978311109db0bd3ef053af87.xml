@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_script">
+    <sys_transform_script action="DELETE">
+        <active>true</active>
+        <map display_value=" Import Historic NeedIt Data">baabe4e7978311109db0bd3ef053af8e</map>
+        <order>100</order>
+        <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+
+	// If the source data does not have a u_requested_for_email field, 
+  // create the target email address from the Requested for value.  Email addresses 
+  // have the format firstname.lastname@example.com.  Convert the u_requested_for 
+  // value to lowercase.  Replace the space with a . and concatenate with 
+  // @example.com
+  if(!("u_requested_for_email" in source)){
+    var name = source.u_requested_for.toLowerCase();
+    target.u_requested_for_email = name.replace(" ", ".") + "@example.com";
+  }
+})(source, map, log, target);]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-14 19:39:40</sys_created_on>
+        <sys_id>96d1b06f978311109db0bd3ef053af87</sys_id>
+        <sys_name>onStart</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_transform_script_96d1b06f978311109db0bd3ef053af87</sys_update_name>
+        <when>onStart</when>
+    </sys_transform_script>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>e02aa83adb1a59d08aea21c40596192a</instance_id>
+        <instance_name>dev139427</instance_name>
+        <name>sys_transform_script_96d1b06f978311109db0bd3ef053af87</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_transform_script"&gt;
+    &lt;sys_transform_script action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;map display_value=" Import Historic NeedIt Data"&gt;baabe4e7978311109db0bd3ef053af8e&lt;/map&gt;
+        &lt;order&gt;100&lt;/order&gt;
+        &lt;script&gt;&lt;![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+
+	// If the source data does not have a u_requested_for_email field, 
+  // create the target email address from the Requested for value.  Email addresses 
+  // have the format firstname.lastname@example.com.  Convert the u_requested_for 
+  // value to lowercase.  Replace the space with a . and concatenate with 
+  // @example.com
+  if(!("u_requested_for_email" in source)){
+    var name = source.u_requested_for.toLowerCase();
+    target.u_requested_for_email = name.replace(" ", ".") + "@example.com";
+  }
+})(source, map, log, target);]]&gt;&lt;/script&gt;
+        &lt;sys_class_name&gt;sys_transform_script&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2022-11-14 19:39:40&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;96d1b06f978311109db0bd3ef053af87&lt;/sys_id&gt;
+        &lt;sys_name&gt;onStart&lt;/sys_name&gt;
+        &lt;sys_package display_value="NeedIt" source="x_58872_needit"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="NeedIt"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_transform_script_96d1b06f978311109db0bd3ef053af87&lt;/sys_update_name&gt;
+        &lt;when&gt;onStart&lt;/when&gt;
+    &lt;/sys_transform_script&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>-1692046255</payload_hash>
+        <record_name>onStart</record_name>
+        <reverted_from/>
+        <source>b022f3f3970b11109db0bd3ef053af2e</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-16 04:17:47</sys_created_on>
+        <sys_id>792237f3970b11109db0bd3ef053afa3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1847ea844550000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-16 04:17:47</sys_updated_on>
+        <type>Transform Script</type>
+        <update_guid>b52237f3980b1110e282cc502d11cba3</update_guid>
+        <update_guid_history>b52237f3980b1110e282cc502d11cba3:0,1821abf31bc7111090038bb327744d1b:-1809601511,e6f1f02f34831110315b6a6e238b1943:936469517</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-16 04:26:54</sys_created_on>
+        <sys_db_object display_value="" name="sys_transform_script">sys_transform_script</sys_db_object>
+        <sys_id>0177c56c0d0a41008416def5171e4000</sys_id>
+        <sys_metadata>96d1b06f978311109db0bd3ef053af87</sys_metadata>
+        <sys_name>onStart</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>sys_transform_script_96d1b06f978311109db0bd3ef053af87</sys_update_name>
+        <sys_update_version display_value="sys_transform_script_96d1b06f978311109db0bd3ef053af87">792237f3970b11109db0bd3ef053afa3</sys_update_version>
+    </sys_metadata_delete>
+</record_update>
